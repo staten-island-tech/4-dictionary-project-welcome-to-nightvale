@@ -56,6 +56,26 @@ store_items = [
         "name": "orb",
         "price": 100000,
         "desc": "it explosions"
+    },
+  {
+        "name": "canned scream",
+        "price": 43.21,
+        "desc": "please do not open while inside store"
+    },
+  {
+        "name": "whimsical frog",
+        "price": 200,
+        "desc": "eats cannoli :33"
+    },
+  {
+        "name": "spooky mirror",
+        "price": 1.50,
+        "desc": "BROKEN"
+    },
+  {
+        "name": "hedge maze",
+        "price": 2500,
+        "desc": "may include friends"
     }
 ]
 
@@ -75,9 +95,6 @@ purchase(selection) """
 print("welcome !! to store.")
 for index, item in enumerate(store_items):
     print(index, ":", item["name"])
-    selection = int(input("select an item number to purchase!  "))
-    x = selection
-def cart_addition(y)
-    if x > store_items:
-        
-print(store_items[x]["name"])
+selection = int(input("select an item number to purchase!  "))
+
+print(store_items[selection]["name"])
