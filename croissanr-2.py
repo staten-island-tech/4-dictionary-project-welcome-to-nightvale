@@ -71,19 +71,33 @@ store_items = [
     }
 ]
 
+cart = []
+t = []
+def cart_addition(x):
+    for index, item in enumerate(store_items):
+        if x == index:
+            cart.append(item["name"])
+            print(f"{item["name"]} has been added to cart")
+def total(y):
+    for index, item in enumerate(store_items):
+        if y == index:
+            t.append(item["price"])
+
 print("welcome !! to store.")
 for index, item in enumerate(store_items):
     print(index, ":", item["name"])
 selection = int(input("select an item number to purchase!  "))
-cart = []
-def cart_addition(x)
-    for index, item in enumerate(store_items):
-        if x == index:
-            cart.append(item["name"])
-            print(f"Your cart: {cart}")
+
+cart_addition(selection)
+total(selection)
+
 ask_cont = input("would you like to keep shopping? (indeed/nuh uh)  ")
-if ask_cont == "indeed":
-    cart_addition
-else:
-    print("thank you for shopping !!")
-    print(f"Your cart: {cart}")
+while ask_cont == "indeed":
+    selectionn = int(input("select another item!  "))
+    cart_addition(selectionn)
+    total(selectionn)
+    ask_cont = input("would you like to keep shopping? (indeed/nuh uh)  ")
+
+print("thank you for shopping !!")
+print(f"Your cart: {cart}")
+print(f"Your total: ${sum(t)}")
